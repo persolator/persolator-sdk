@@ -1,0 +1,36 @@
+{
+  "name": "persolator-sdk",
+  "version": "0.1.1",
+  "description": "TypeScript SDK for the Persolator permissionless perpetuals protocol on Solana Devnet",
+  "keywords": ["solana", "persolator", "perps", "defi", "sdk", "typescript", "devnet"],
+  "license": "MIT",
+  "author": "Persolator Protocol",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/persolator/persolator-sdk"
+  },
+  "homepage": "https://persolator.xyz/docs",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
